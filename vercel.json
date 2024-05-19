@@ -1,6 +1,15 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/index.js" }
+  "devCommand": "uvicorn main:app --host 0.0.0.0 --port 5000",
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
   ]
 }
