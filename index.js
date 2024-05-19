@@ -25,4 +25,9 @@ app.use("/api/posts", postRoute);
 app.get("/test", (req, res) => {
   res.send("Welcome to homepage");
 });
+
+app.listen(process.env.PORT, () => {
+    console.log("Backend server is running!");
+}
+);
 module.exports = app;
