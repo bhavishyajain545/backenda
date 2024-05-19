@@ -1,17 +1,5 @@
 {
-    "version": 2,
-    "routes": [
-        {
-            "src": "/api/users/(.*)",
-            "dest": "/api/users/index.js"
-        },
-        {
-            "src": "/api/auth/(.*)",
-            "dest": "/api/auth/index.js"
-        },
-        {
-            "src": "/api/posts/(.*)",
-            "dest": "/api/posts/index.js"
-        }
+    "rewrtites":[
+        {"source":"/(.*)","destination":"/"}
     ]
 }
